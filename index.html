@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Biomagnetismo Medicinal - Terapeutas Montini</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+
+        <style>
+            /* Reset box sizing para todos */
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Estilos base del body */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Nunito", sans-serif;
+                background: linear-gradient(135deg, #8b1538, #d63384);
+                color: #333;
+                overflow-x: hidden;
+            }
+
+            .title,
+            .therapists h3 {
+                font-family: "Raleway", sans-serif;
+            }
+
+            /* Contenedor principal */
+            .flyer {
+                max-width: 480px;
+                width: 100%;
+                margin: 1rem auto;
+                background: #fff;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(139, 21, 56, 0.3);
+            }
+
+            /* Header del flyer */
+            .header {
+                background: linear-gradient(135deg, #dc3545 0%, #e91e63 100%);
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+            }
+
+            /* Imágenes responsivas */
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* Logo circular */
+            .logo-placeholder {
+                width: 80px;
+                height: 80px;
+                background: rgba(255, 255, 255, 0.2);
+                border: 3px solid #fff;
+                border-radius: 50%;
+                margin: 0 auto 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: #fff;
+                font-weight: bold;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .logo-placeholder img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            /* Título principal */
+            .title {
+                color: #fff;
+                font-size: 28px;
+                font-weight: 700;
+                margin: 0;
+                text-shadow: 25px 10px 4px rgba(0, 0, 0, 0.4);
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                color: #f8d7da;
+                font-size: 25px;
+                font-weight: 600;
+                margin: 5px 0 0 0;
+                text-shadow: 25px 15px 3px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Contenido general */
+            .content {
+                padding: 30px 25px;
+            }
+
+            /* Sección de terapeutas */
+            .therapists {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .therapists h3 {
+                color: #8b1538;
+                font-size: 20px;
+                margin: 0 0 10px 0;
+                font-weight: 700;
+            }
+
+            .therapists p {
+                color: #666;
+                font-size: 18px;
+                margin: 0;
+                font-weight: 500;
+            }
+
+            /* Secciones de información */
+            .info-section {
+                background: #fdf2f8;
+                border-radius: 15px;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-left: 5px solid #dc3545;
+            }
+
+            .info-section h4 {
+                margin: 0 0 10px 0;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+                color: #8b1538;
+            }
+
+            .info-section p {
+                margin: 5px 0;
+                font-size: 16px;
+                line-height: 1.4;
+                color: #333;
+            }
+
+            /* Variantes de color para subsecciones */
+            .dates {
+                background: linear-gradient(135deg, #fce7f3 0%, #f9a8d4 100%);
+                color: #8b1538;
+                text-align: center;
+                font-weight: 700;
+                font-size: 18px;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+
+            .location {
+                background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+                color: #8b1538;
+                border-radius: 10px;
+                padding: 10px 15px;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .contact {
+                background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+                color: #8b1538;
+                text-align: center;
+                border-radius: 10px;
+                padding: 15px 10px;
+                margin-bottom: 20px;
+            }
+
+            /* Estilo para teléfono */
+            .phone {
+                font-size: 20px;
+                font-weight: 700;
+                color: #dc3545;
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px 0;
+                padding: 10px 20px;
+                background: #fff;
+                border-radius: 25px;
+                border: 2px solid #dc3545;
+                box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .phone:hover,
+            .phone:focus {
+                transform: translateY(-2px);
+                background: #dc3545;
+                color: #fff;
+                box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3);
+                outline: none;
+            }
+
+            /* Botón WhatsApp */
+            .whatsapp-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                background: #25d366;
+                color: #fff;
+                text-align: center;
+                padding: 15px;
+                margin: 20px auto 0;
+                border-radius: 30px;
+                font-weight: 600;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+                border: none;
+                max-width: 320px;
+                width: 100%;
+            }
+
+            .whatsapp-btn i {
+                font-size: 20px;
+            }
+
+            .whatsapp-btn:hover,
+            .whatsapp-btn:focus {
+                background: #1ebe5d;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 16px rgba(37, 211, 102, 0.4);
+                outline: none;
+            }
+
+            /* Elemento decorativo */
+            .decorative-element {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                top: -50px;
+                right: -50px;
+                pointer-events: none;
+                user-select: none;
+            }
+
+            /* Nota de edición o advertencia */
+            .edit-note {
+                background: #fdf2f8;
+                border: 1px solid #f9a8d4;
+                border-radius: 10px;
+                padding: 15px;
+                margin-top: 20px;
+                font-size: 14px;
+                color: #8b1538;
+                text-align: center;
+            }
+
+            /* Grupo de botones */
+            .btn-group {
+                text-align: center;
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .btn-group button {
+                background: #dc3545;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background 0.3s ease;
+            }
+
+            .btn-group button:nth-child(2) {
+                background: #e91e63;
+            }
+
+            .btn-group button:nth-child(3) {
+                background: #8b1538;
+            }
+
+            .btn-group button:hover,
+            .btn-group button:focus {
+                opacity: 0.9;
+                outline: none;
+            }
+
+            /* Caja de información destacada */
+            .info-box {
+                text-align: center;
+                max-width: 500px;
+                margin: 15px auto 0;
+                background: #fdf2f8;
+                border: 1px solid #e91e63;
+                border-radius: 10px;
+                padding: 15px;
+                font-size: 14px;
+                color: #8b1538;
+            }
+
+            /* Estilos acordeón */
+            .accordion {
+                max-width: 700px;
+                margin: 20px auto;
+                border: 1px solid #f9a8d4;
+                border-radius: 5px;
+                overflow: hidden;
+                font-family: Arial, sans-serif;
+            }
+
+            .accordion-item {
+                border-bottom: 1px solid #f9a8d4;
+            }
+
+            .accordion-header {
+                background: #8b1538;
+                color: white;
+                cursor: pointer;
+                padding: 15px 20px;
+                font-size: 1.1rem;
+                user-select: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .accordion-header:hover {
+                background: #6f1229;
+            }
+
+            .accordion-header::after {
+                content: "▼";
+                font-size: 0.8rem;
+                transition: transform 0.3s ease;
+            }
+
+            .accordion-header.active::after {
+                transform: rotate(180deg);
+            }
+
+            .accordion-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+                background: #fdf2f8;
+                padding: 0 20px;
+                color: #333;
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .accordion-content p,
+            .accordion-content ol {
+                margin: 15px 0;
+            }
+
+            .accordion-content ol {
+                padding-left: 20px;
+            }
+
+            .accordion-content li {
+                margin-bottom: 10px;
+            }
+
+            /* Botón de edición oculto por defecto */
+            .edit-btn {
+                display: none;
+            }
+
+            /* Botón secreto para activar edición */
+            .secret-area {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                opacity: 0;
+                cursor: pointer;
+                z-index: 1000;
+                background: transparent;
+            }
+
+            .ubicacion-btn {
+                display: inline-block;
+                margin: 10px auto;
+                background: #dc3545;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 600;
+                transition: background 0.3s ease;
+            }
+
+            .ubicacion-btn:hover {
+                background: #c82333;
+            }
+
+            /* Responsive: Tablets */
+            @media (max-width: 768px) {
+                .flyer {
+                    max-width: 95%;
+                }
+
+                .title {
+                    font-size: 24px;
+                }
+
+                .content {
+                    padding: 25px 20px;
+                }
+
+                .logo-placeholder {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                .logo-placeholder img {
+                    width: 55px;
+                    height: 55px;
+                }
+
+                .secret-area {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .info-box {
+                    font-size: 13px;
+                }
+            }
+
+            /* Responsive: Celulares */
+            @media (max-width: 480px) {
+                body {
+                    padding: 10px;
+                }
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .info-section h4 {
+                    font-size: 14px;
+                }
+
+                .info-section p {
+                    font-size: 14px;
+                }
+
+                .phone {
+                    font-size: 16px;
+                    padding: 8px 16px;
+                }
+
+                .btn-group button {
+                    padding: 8px 16px;
+                    font-size: 13px;
+                }
+
+                .whatsapp-btn {
+                    padding: 15px;
+                    font-size: 14px;
+                    max-width: 300px;
+                    width: 100%;
+                    margin: 20px auto 0;
+                    display: block;
+                }
+            }
+
+            .whatsapp-float {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #25d366;
+                color: #fff;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 28px;
+                box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+                cursor: pointer;
+                z-index: 999;
+                transition: all 0.3s ease;
+            }
+
+            .whatsapp-float:hover {
+                background-color: #1ebe5d;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Área secreta para activar modo edición -->
+        <div
+            class="secret-area"
+            onclick="toggleEditMode()"
+            title="Área secreta para editar"
+        ></div>
+
+        <div class="flyer">
+            <div class="header">
+                <div class="decorative-element"></div>
+                <div
+                    class="logo-placeholder logo-tap-area"
+                    onclick="logoTapActivation()"
+                >
+                    <img src="images/5bb3af021b95fa1598792207.jpg" alt="" />
+                </div>
+                <h1 class="title">BIOMAGNETISMO MEDICINAL</h1>
+                <h3 class="subtitle">"Los Robles"</h3>
+            </div>
+
+            <div class="content">
+                <div class="therapists">
+                    <h3>Terapeutas</h3>
+                    <p>Analía y Gerardo Montini</p>
+                </div>
+
+                <div class="accordion" id="infoAccordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Qué es el Biomagnetismo Médico?
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                El biomagnetismo médico es un sistema
+                                terapéutico en el que se utilizan imanes para
+                                combatir parásitos, bacterias, hongos, virus y
+                                otros gérmenes que son la causa de diversas
+                                enfermedades.
+                            </p>
+                            <p>
+                                Los imanes se aplican en diversas zonas del
+                                cuerpo, como si se tratara de un rastreo o
+                                escaneo. Una vez reconocidos los órganos y
+                                tejidos que sufren una distorsión, el terapeuta
+                                aplica un conjunto de imanes en esos puntos
+                                durante 10 a 15 minutos a cada persona.
+                            </p>
+                            <p>
+                                El biomagnetismo médico corrige la alteración
+                                iónica y recupera el equilibrio perdido del
+                                cuerpo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Beneficios Destacados
+                        </div>
+                        <div class="accordion-content">
+                            <ol>
+                                <li>
+                                    Es compatible con cualquier otra forma de
+                                    terapia alternativa y también puede
+                                    utilizarse simultáneamente con tratamientos
+                                    alopáticos tradicionales.
+                                </li>
+                                <li>
+                                    Este sistema pretende detectar las
+                                    distorsiones del pH del organismo para saber
+                                    las patologías. El pH del organismo está
+                                    diseñado para gravitar en un sistema casi
+                                    neutro y los campos magnéticos de mediana
+                                    intensidad permiten detectar dónde se está
+                                    distorsionando el pH.
+                                </li>
+                                <li>
+                                    Teóricamente el biomagnetismo ejerce un
+                                    efecto de corrección sobre todas las
+                                    distorsiones energéticas que se alberguen en
+                                    un organismo enfermo, cualquiera que sea su
+                                    origen.
+                                </li>
+                                <li>
+                                    En la práctica, esta terapia demuestra que
+                                    aplicando imanes de determinada fuerza y
+                                    polaridad en puntos específicos del cuerpo,
+                                    se consigue exterminar en tiempo breve,
+                                    virus, bacterias, hongos o parásitos, que
+                                    son causa de la mayoría de las enfermedades
+                                    graves del hombre.
+                                </li>
+                                <li>
+                                    Ante el hecho de que ningún enfermo es igual
+                                    a otro, el éxito de la terapia biomagnética
+                                    depende de diferentes factores, tales como:
+                                    la edad, estado nutricional, carga tóxica,
+                                    tiempo de evolución de la enfermedad,
+                                    remedios recibidos previamente, lesiones que
+                                    ya están instauradas en su cuerpo, entre
+                                    otras.
+                                </li>
+                                <li>
+                                    Como energetizante, este tipo de terapia
+                                    descubrió que el polo positivo (+) activa,
+                                    impulsa y fortalece los procesos biológicos
+                                    del organismo, es dinamizador, vitalizante y
+                                    proporciona energía. Por lo tanto, está
+                                    especialmente indicado en casos de
+                                    debilidades y desgarros musculares,
+                                    fracturas de huesos y ligamentos, esguinces,
+                                    rehabilitación, cicatrización de heridas,
+                                    entre otros.
+                                </li>
+                                <li>
+                                    El polo negativo (-) del imán es analgésico,
+                                    antinflamatorio, relajante y detiene los
+                                    procesos nocivos para el organismo y, está
+                                    principalmente indicado para calmar o
+                                    suprimir el dolor.
+                                </li>
+                                <li>
+                                    Desde la primera o segunda sesión el enfermo
+                                    ya comienza a notar cambios positivos en su
+                                    salud. En promedio para casos crónicos
+                                    pueden requerirse 4 o 5 tratamientos, pero
+                                    el número real lo determinará el mismo
+                                    paciente y sus patologías.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Importancia y Aplicaciones
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Los beneficios de este tipo de terapias son cada
+                                vez menos discutidos y poco a poco se han ido
+                                complementando con tratamientos tradicionales
+                                para combatir enfermedades tan complicadas como
+                                el cáncer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section dates" id="dateSection">
+                    <h4>📅 Próximas Fechas</h4>
+                    <p >De Lunes a Viernes y Sábados a la mañana</p>
+                </div>
+
+                <div class="info-section location">
+                    <button
+                        class="ubicacion-btn"
+                        onclick="abrirMapa()"
+                        style="display: flex; align-items: center; gap: 6px"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="#FFFFFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                            style="
+                                display: inline-block;
+                                vertical-align: middle;
+                            "
+                        >
+                            <path
+                                d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"
+                            ></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Ubicación
+                    </button>
+                    <p>Ruta Nacional 40 - Los Robles- San Blas de los Sauces<br />La Rioja</p>
+                </div>
+
+                <div class="info-section">
+                    <h4>🕒 Horarios</h4>
+                    <p>De 9:00 a 12:00 y de 15:00 a 21:00</p>
+                <div class="info-section contact" style="text-align: center">
+                    <h4
+                        style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 6px;
+                            color: green;
+                            margin: 0 auto;
+                            line-height: 1;
+                            justify-content: center;
+                        "
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="green"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm13 6H4v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-5 4h2v2h-2v-2zm-4 0h2v2h-2v-2zm-4 0h2v2H7v-2z"
+                            />
+                        </svg>
+                        Reservá tu Turno
+                    </h4>
+
+                    <div style="margin-top: 4px">
+                        <a
+                            href="https://wa.me/5493827400933"
+                            class="phone"
+                            style="
+                                color: red;
+                                text-decoration: none;
+                                font-size: 1.2rem;
+                            "
+                        >
+                            3827-400933
+                        </a>
+                    </div>
+                </div>
+
+                <div class="whatsapp-btn" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Sacar Turno por WhatsApp
+                </div>
+
+                <!-- Nota de edición solo visible en modo admin -->
+                <div class="edit-note" id="editNote" style="display: none">
+                    <strong>💡 Modo Administrador Activado:</strong> Puedes
+                    editar las fechas haciendo clic en el botón de abajo.
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <!-- Botón de editar solo visible en modo admin -->
+            <button id="editBtn" class="edit-btn" onclick="editDates()">
+                ✏️ Editar Fechas
+            </button>
+            <button onclick="shareInWhatsApp()">
+                📤 Compartir por WhatsApp
+            </button>
+            <button onclick="copyLink()">🔗 Copiar Link</button>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 Cómo funciona:</strong><br />
+            1. Haz clic en "Compartir por WhatsApp"<br />
+            2. El mensaje incluirá un link al volante completo<br />
+            3. Quien haga clic verá el diseño con todos los colores<br />
+            4. También puedes copiar el link y enviarlo por separado
+        </div>
+
+        <script>
+            let isEditMode = false;
+            let clickCount = 0;
+            let logoTapCount = 0;
+
+            // Cargar fechas guardadas al iniciar la página
+            window.addEventListener("DOMContentLoaded", function () {
+                loadSavedDates();
+            });
+
+            // Función para cargar fechas guardadas
+            function loadSavedDates() {
+                try {
+                    const urlParams = new URLSearchParams(
+                        window.location.search
+                    );
+                    const datesFromUrl = urlParams.get("dates");
+
+                    if (datesFromUrl && datesFromUrl.trim() !== "") {
+                        document.getElementById("dateText").textContent =
+                            datesFromUrl;
+                        console.log("Fechas cargadas desde URL:", datesFromUrl);
+                    } else {
+                        const savedDates = getCookie("biomagnetismo_dates");
+                        if (savedDates && savedDates.trim() !== "") {
+                            document.getElementById("dateText").textContent =
+                                savedDates;
+                            console.log(
+                                "Fechas cargadas desde cookie:",
+                                savedDates
+                            );
+                        }
+                    }
+                } catch (error) {
+                    console.log("Error al cargar fechas:", error);
+                }
+            }
+
+            // Función para guardar fechas usando cookies
+            function saveDates(dates) {
+                try {
+                    setCookie("biomagnetismo_dates", dates, 365);
+                    console.log("Fechas guardadas:", dates);
+                    return true;
+                } catch (error) {
+                    console.error("Error al guardar fechas:", error);
+                    return false;
+                }
+            }
+
+            // Función para establecer cookies
+            function setCookie(name, value, days) {
+                const expires = new Date();
+                expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+                document.cookie =
+                    name +
+                    "=" +
+                    encodeURIComponent(value) +
+                    ";expires=" +
+                    expires.toUTCString() +
+                    ";path=/";
+            }
+
+            // Función para obtener cookies
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0)
+                        return decodeURIComponent(
+                            c.substring(nameEQ.length, c.length)
+                        );
+                }
+                return null;
+            }
+
+            // Función para alternar el modo de edición (área secreta - esquina)
+            function toggleEditMode() {
+                clickCount++;
+
+                if (clickCount === 5) {
+                    activateAdminMode();
+                    clickCount = 0;
+                } else {
+                    setTimeout(() => {
+                        clickCount = 0;
+                    }, 2000);
+                }
+            }
+
+            // Función alternativa para móviles (tap en el logo)
+            function logoTapActivation() {
+                logoTapCount++;
+
+                if (logoTapCount === 7) {
+                    activateAdminMode();
+                    logoTapCount = 0;
+                } else {
+                    setTimeout(() => {
+                        logoTapCount = 0;
+                    }, 3000);
+                }
+            }
+
+            // Función para activar/desactivar modo admin
+            function activateAdminMode() {
+                isEditMode = !isEditMode;
+                const editBtn = document.getElementById("editBtn");
+                const editNote = document.getElementById("editNote");
+
+                if (isEditMode) {
+                    editBtn.style.display = "inline-block";
+                    editNote.style.display = "block";
+                    if (navigator.vibrate) {
+                        navigator.vibrate([100, 50, 100]);
+                    }
+                    alert("🔓 Modo administrador activado");
+                } else {
+                    editBtn.style.display = "none";
+                    editNote.style.display = "none";
+                    if (navigator.vibrate) {
+                        navigator.vibrate(50);
+                    }
+                    alert("🔒 Modo administrador desactivado");
+                }
+            }
+
+            // Combinación de teclas para computadoras (Ctrl + Shift + E)
+            document.addEventListener("keydown", function (e) {
+                if (e.ctrlKey && e.shiftKey && e.key === "E") {
+                    e.preventDefault();
+                    activateAdminMode();
+                }
+            });
+
+            // Acordeón funcional
+            document.querySelectorAll(".accordion-header").forEach((header) => {
+                header.addEventListener("click", () => {
+                    const activeHeader = document.querySelector(
+                        ".accordion-header.active"
+                    );
+                    if (activeHeader && activeHeader !== header) {
+                        activeHeader.classList.remove("active");
+                        activeHeader.nextElementSibling.style.maxHeight = null;
+                    }
+                    header.classList.toggle("active");
+                    const content = header.nextElementSibling;
+                    if (header.classList.contains("active")) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+
+            function shareInWhatsApp() {
+                const mensaje =
+                    "🌿 Descubrí los beneficios del biomagnetismo medicinal.\nReservá tu sesión en La Rioja Capital por Whatsapp al 3827-400933. Más info acá 👉 ";
+                const urlActual = window.location.href;
+                const textoCompleto = encodeURIComponent(mensaje + urlActual);
+                const url = `https://wa.me/?text=${textoCompleto}`;
+                window.open(url, "_blank");
+            }
+
+            function abrirMapa() {
+                const url = "https://maps.app.goo.gl/L1Gicq9vrjksyVa16";
+                window.open(url, "_blank");
+            }
+
+            function editDates() {
+                if (!isEditMode) {
+                    alert("❌ No tienes permisos para editar");
+                    return;
+                }
+
+                const dateText = document.getElementById("dateText");
+                const currentDates = dateText.textContent;
+                const newDates = prompt(
+                    "Ingresa las nuevas fechas:",
+                    currentDates
+                );
+
+                if (newDates !== null && newDates.trim() !== "") {
+                    dateText.textContent = newDates;
+
+                    // Guardar en cookie (opcional)
+                    saveDates(newDates);
+
+                    // Actualizar URL con parámetro
+                    const newUrl = new URL(window.location.href);
+                    newUrl.searchParams.set("dates", newDates);
+                    window.history.replaceState(null, "", newUrl.toString());
+
+                    alert(
+                        "✅ Fechas actualizadas y link preparado para compartir."
+                    );
+                } else if (newDates !== null) {
+                    alert("❌ No se pueden guardar fechas vacías");
+                }
+            }
+
+            function shareOnWhatsApp() {
+                const phone = "5493827400933";
+                const message = encodeURIComponent(
+                    "¡Hola! Quisiera sacar un turno para biomagnetismo."
+                );
+                window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+            }
+
+            function copyLink() {
+                const shortLink =
+                    "https://gerardodamian.github.io/volante-bio/";
+                if (navigator.clipboard) {
+                    navigator.clipboard
+                        .writeText(shortLink)
+                        .then(() => {
+                            alert("¡Link copiado al portapapeles!");
+                        })
+                        .catch(() => {
+                            fallbackCopyTextToClipboard(shortLink);
+                        });
+                } else {
+                    fallbackCopyTextToClipboard(shortLink);
+                }
+            }
+
+            function fallbackCopyTextToClipboard(text) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand("copy");
+                    alert("¡Link copiado al portapapeles!");
+                } catch (err) {
+                    alert(
+                        "No se pudo copiar automáticamente. El link es: " + text
+                    );
+                }
+                document.body.removeChild(textArea);
+            }
+        </script>
+        <!-- Botón flotante de WhatsApp -->
+        <div class="whatsapp-float" onclick="shareOnWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </body>
+</html>
